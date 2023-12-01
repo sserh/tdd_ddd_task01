@@ -1,7 +1,6 @@
 package ru.raccoon;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
 
@@ -27,7 +26,16 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        List<String> list = new ArrayList<>(phoneBookMap.keySet());
+        Collections.sort(list);
+
+        StringBuilder result = new StringBuilder(list.get(0));
+
+        for (int i = 1; i < list.size(); i++) {
+            result.append("\n").append(list.get(i));
+        }
+        System.out.println(result);
+        return result.toString();
     }
 
 }
