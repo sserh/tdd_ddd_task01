@@ -26,4 +26,8 @@ public class PhoneBook {
         return phoneBookMap.get(name);
     }
 
+    public String printAllNames() {
+        return null;
+    }
+
 }
