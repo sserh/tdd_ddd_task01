@@ -21,4 +21,8 @@ public class PhoneBook {
         return reversePhoneBookMap.get(phoneNumber);
     }
 
+    public String findByName(String name) {
+        return null;
+    }
+
 }

@@ -25,4 +25,16 @@ class PhoneBookTest {
         Assertions.assertEquals("TestName_2", phoneBook.findByNumber("PhoneNumber_2"));
         Assertions.assertEquals("TestName_3", phoneBook.findByNumber("PhoneNumber_3"));
     }
+
+    @Test
+    void findByName() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("TestName_1", "PhoneNumber_1");
+        phoneBook.add("TestName_2", "PhoneNumber_2");
+        phoneBook.add("TestName_3", "PhoneNumber_3");
+
+        Assertions.assertEquals("PhoneNumber_1", phoneBook.findByName("TestName_1"));
+        Assertions.assertEquals("PhoneNumber_2", phoneBook.findByName("TestName_2"));
+        Assertions.assertEquals("PhoneNumber_3", phoneBook.findByName("TestName_3"));
+    }
 }
